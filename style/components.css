@@ -1,0 +1,61 @@
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 150px;
+  display: flex;
+  flex-direction: column;        /* 👈 Stack vertically */
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 10px;
+}
+
+.card span {
+  margin-bottom: 15px; 
+  font-size: 1.3rem;          /* 👈 Space between title and button */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.play-btn {
+  padding: 10px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.play-btn:hover {
+  background-color: #45a049;
+}
+
+#balance {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.container h1 {
+  font-family: greycliff;
+  font-weight: 1000px;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}

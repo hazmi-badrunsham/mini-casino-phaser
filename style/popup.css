@@ -1,0 +1,160 @@
+/* Modal Overlay Styles */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #3a3a5a;
+    margin: auto;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content h2 {
+    color: #ffcc00;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-family: greycliff;
+    letter-spacing: 1px;
+
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    font-family: greycliff;
+    letter-spacing: 1px;
+}
+
+#deposit-amount-input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #5a5a7a;
+    border-radius: 8px;
+    background-color: #2a2a4a;
+    color: #e0e0e0;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+        font-family: greycliff;
+
+}
+
+#deposit-amount-input:focus {
+    border-color: #ffcc00;
+}
+
+#top-deposit-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/* Close Button */
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.deposit-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ee4266);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    font-family: greycliff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.deposit-btn:hover {
+    background: linear-gradient(45deg, #ee4266, #ff6b6b);
+    transform: translateY(-2px);
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #f00;
+    text-decoration: none;
+}
+
+/* Message for deposit confirmation/error */
+.message {
+    margin-top: 15px;
+    font-size: 1em;
+    font-weight: bold;
+     font-family: greycliff;
+
+}
+
+.message.success {
+    color: #00a735;
+}
+
+.message.error {
+    color: #ff0000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 10px;
+    }
+}
+/* Responsive adjustments for buttons */
+@media (max-width: 600px) {
+    .play-btn, .deposit-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    #top-deposit-btn {
+        position: static; /* Stack on small screens */
+        margin-bottom: 20px;
+        max-width: 25rem;
+        width: 100%;
+    }
+}

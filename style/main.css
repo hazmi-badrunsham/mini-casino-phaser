@@ -1,0 +1,10 @@
+@import url('./layout.css');
+@import url('./components.css');
+@import url('./popup.css');
+
+@font-face {
+            font-family: 'greycliff'; /* Choose a unique name for your font family */
+            src: url('../assets/font/fonnts.com-Greycliff_CF_Regular.otf') format('opentype'); /* Adjust path and filename */
+            font-weight: normal;
+            font-style: normal;
+        }

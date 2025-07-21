@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Game Hub</title>
+  <link rel="stylesheet" href="style/main.css" />
+  <script type="module" src="./src/deposit.js"></script>
+  <script type="module" src="./src/gameSelector.js"></script>
+  <script src="./phaser.js"></script>
+
+</head>
+<body>
+
+  <!-- Game Hub UI -->
+  <div id="game-hub-container" class="container">
+    <h1>iCasino</h1>
+    <button id="top-deposit-btn" class="deposit-btn">Deposit Coins</button>
+    <div id="balance">💰 Coins: 0</div>
+
+    <div class="game-grid">
+      <div class="card">
+        <span>Slot Machine</span>
+        <button class="play-btn" id="play-slot-btn">Play</button>
+      </div>
+       <div class="card">
+        <span>Aeroplane</span>
+        <button class="play-btn" id="play-aeroplane-btn">Play</button>
+      </div>
+      <!-- Add more cards for other games if needed -->
+    </div>
+
+    <!-- Deposit Modal -->
+    <div id="deposit-modal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Deposit Coins</h2>
+        <p>Current Balance: <span id="modal-balance-display">0</span> Coins</p>
+        <input type="number" id="deposit-amount-input" placeholder="Enter amount..." min="1"/>
+        <button id="confirm-deposit-btn" class="deposit-btn">Confirm Deposit</button>
+        <p id="deposit-message" class="message"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phaser Game Container -->
+  <div id="phaser-game-container" style="display: none;">
+    <button id="back-to-hub-btn" class="deposit-btn" style="position: absolute; top: 20px; left: 20px; z-index: 1001;">Back to Hub</button>
+  </div>
+
+
+</body>
+</html>
